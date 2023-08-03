@@ -76,7 +76,7 @@
 		</div>
 		<div class="menu_content">
 			<ul>
-				<li><a href="inex.html">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li><a href="contact.html">Contact</a></li>
 				<li><a href="accounts/login">Login</a></li>
 				<li><a href="accounts/register">Register</a></li>
@@ -263,9 +263,15 @@
 
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
-								<div class="destination_subtitle"><p>{{dest.desc}}</p></div>
-								<div class="destination_price">From ${{dest.price}}</div>
+								<form action="getlocationdet" method="post">
+									{% csrf_token %}
+									<div class="destination_title" name="loc_name">{{dest.name}}</div>
+									<div class="destination_subtitle"><p>{{dest.desc}}</p></div>
+									<div class="destination_price">From ${{dest.price}}</div>
+									<label>Know More.
+										<input type = "submit">
+									</label>
+								</form>
 							</div>
 						</div>
 						{% endfor %}
