@@ -263,7 +263,7 @@
 
 							</div>
 							<div class="destination_content">
-								<form action="getlocationdet" method="post">
+								<form action="getlocationdet" method="get">
 									{% csrf_token %}
 									<div class="destination_title" name="loc_name">{{dest.name}}</div>
 									<div class="destination_subtitle"><p>{{dest.desc}}</p></div>

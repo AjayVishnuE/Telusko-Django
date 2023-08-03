@@ -38,7 +38,7 @@ def register(request):
                 return redirect('register')
             else:
                 user = User.objects.create_user(username=username, password=password1, email=email, first_name=first_name, last_name=last_name)
-                user.save();
+                user.save()
                 print('user created')
                 return redirect('login')
         else:
