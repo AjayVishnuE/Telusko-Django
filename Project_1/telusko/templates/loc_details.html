@@ -1,5 +1,3 @@
-{% load static %}
-{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location Details</title>
 </head>
-<body>Mumbai</h1>
-    {% comment %} <img src="" alt=""> {% endcomment %}
-    <p>goof morning mumbai</p>
-    <h3>welcome</h3>
+<body>
+    <h2>qwesf</h2>
+    {% block content %}
+    <h1>{{dest}}</h1>
+    <h1>{{dest.name}}</h1>
+    {% for item in dests %}
+    <h1>qwert</h1>
+        <h1>{{item.id}}</h1>
+        {% if item.id == x %}
+            <h1>Zxcvb</h1>
+            <p>hello{{item.name}}</p>
+        {% endif %}
+    {% endfor %}
+    {% endblock content %}
 </body>
 </html>

@@ -263,13 +263,13 @@
 
 							</div>
 							<div class="destination_content">
-								<form action="getlocationdet" method="get">
+								<form action="getspecificlocation" method="post">
 									{% csrf_token %}
 									<div class="destination_title" name="loc_name">{{dest.name}}</div>
 									<div class="destination_subtitle"><p>{{dest.desc}}</p></div>
 									<div class="destination_price">From ${{dest.price}}</div>
 									<label>Know More.
-										<input type = "submit">
+										<input name="dest-id" style="display:none;" type = "submit" value="{{dest.id}}">
 									</label>
 								</form>
 							</div>
